@@ -20,7 +20,3 @@ match result with
     
 printfn ""
 printfn ""
-printfn ""
-printfn ""
-printf "Press any key to continue..."
-System.Console.ReadKey() |> ignore

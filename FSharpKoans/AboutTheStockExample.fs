@@ -59,6 +59,18 @@ module ``about the stock example`` =
     // using the F# Interactive window to check your progress.
 
     [<Koan>]
+    let ParseColumns() =
+
+        let result =  
+            stockData
+            |> List.skip 1
+            |> List.map (fun e -> e.Split([|','|]))
+            |> List.map (fun string [] e -> e[0], System.Double.Parse(e[1]) - System.Double.Parse(e[4]))
+            |> List.maxBy snd
+        
+        AssertEquality "2012-03-13" __
+
+    [<Koan>]
     let YouGotTheAnswerCorrect() =
         let result =  __
         
